@@ -1,19 +1,15 @@
 package br.edu.ufabc.leocaliza;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import br.edu.ufabc.leocaliza.view.MainGui;
+import javafx.application.Application;
+
 @SpringBootApplication
-public class LeocalizaApplication implements CommandLineRunner {
+public class LeocalizaApplication{
 
   public static void main(String[] args) {
-    SpringApplication.run(LeocalizaApplication.class, args);
-  }
-
-  @Override
-  public void run(String... args) throws Exception {
-
+    Application.launch(MainGui.class, args);
   }
 
 }
