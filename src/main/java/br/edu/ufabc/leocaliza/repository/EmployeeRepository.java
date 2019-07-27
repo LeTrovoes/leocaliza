@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import br.edu.ufabc.leocaliza.entity.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface EmployeeRepository extends JpaRepository<User, Long> {
   List<User> findByCpf(String cpf);
 }
