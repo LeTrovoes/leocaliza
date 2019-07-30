@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Filial {
+public class Branch {
   @Id
   @GeneratedValue
   private long id;
