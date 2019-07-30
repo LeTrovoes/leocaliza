@@ -10,7 +10,6 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.NaturalId;
-import org.springframework.lang.NonNull;
 
 @Entity
 @Table(name="leocalizaUser")
@@ -22,7 +21,26 @@ public abstract class User {
 
   @NaturalId
   @Column(unique = true)
-  @NonNull
-  protected String cpf;
+  private String cpf;
 
+  @Column(name = "user_name")
+  private String name;
+
+  /**
+   * E-mail válido do usuário.
+   */
+  @Column(unique = true)
+  private String email;
+
+  @Column(name = "user_password")
+  private String password;
+
+  private String endereco;
+
+  /**
+   * @param cpf the cpf to set
+   */
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
 }
