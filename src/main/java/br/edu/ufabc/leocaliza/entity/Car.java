@@ -6,7 +6,7 @@ import javax.persistence.Enumerated;
 
 @Entity
 public class Car extends Vehicle {
-  private int places;
+  private int seats;
 
   private boolean airConditioning;
 
