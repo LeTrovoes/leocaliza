@@ -13,14 +13,8 @@ public class Car extends Vehicle {
   private boolean gearshift;
 
   @Enumerated(EnumType.ORDINAL)
-  private Direction direction;
+  private Steering direction;
 
 // - portaMala :
 
 }
-
-// - lugares : int
-// - arCondicionado : boolean
-// - cambioAutomatico : boolean
-// - direcao : Direção
-// - portaMala :
