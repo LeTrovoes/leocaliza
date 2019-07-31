@@ -13,7 +13,7 @@ public class Car extends Vehicle {
   private boolean gearshift;
 
   @Enumerated(EnumType.ORDINAL)
-  private Steering direction;
+  private Steering steering;
 
 // - portaMala :
 
