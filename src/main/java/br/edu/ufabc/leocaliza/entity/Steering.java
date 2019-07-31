@@ -1,12 +1,12 @@
 package br.edu.ufabc.leocaliza.entity;
 
 
-public enum Direction{
+public enum Steering{
   MECANICA(0), HIDRAULICA(1), ELETRICA(2);
 
   private int value;
 
-  Direction(int value) {
+  Steering(int value) {
     this.value = value;
   }
 
