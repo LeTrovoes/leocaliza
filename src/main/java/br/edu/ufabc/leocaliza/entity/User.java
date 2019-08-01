@@ -42,6 +42,6 @@ public abstract class User {
   @Column(name = "user_password")
   private String password;
 
-  private String endereco;
+  private String address;
 
 }
