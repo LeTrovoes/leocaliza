@@ -3,6 +3,8 @@ package br.edu.ufabc.leocaliza.entity;
 import org.joda.time.Duration;
 import org.joda.time.LocalDateTime;
 
+import javax.persistence.Enumerated;
+import javax.persistence.EnumType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,19 +14,41 @@ import javax.persistence.OneToOne;
 public class Activity {
 
   public enum ActivityType {
-    LEASE, MAINTENANCE, CLEANING, TRANSFER;
+    LEASE(0), MAINTENANCE(1), CLEANING(2), TRANSFER(3);
+
+    private int type;
+
+    ActivityType(int type) {
+      this.type = type;
+    }
+
+    public int getType() {
+      return type;
+    }
   }
 
   public enum ActivityStatus {
-    TODO, IN_PROGRESS, WAITING, DONE, CANCELED;
+    TODO(0), IN_PROGRESS(1), WAITING(2), DONE(3), CANCELED(4);
+
+    private int status;
+
+    ActivityStatus(int status) {
+      this.status = status;
+    }
+
+    public int getStatus() {
+      return status;
+    }
   }
 
   @Id
   @GeneratedValue
   private long id;
 
+  @Enumerated(EnumType.ORDINAL)
   private ActivityType type;
 
+  @Enumerated(EnumType.ORDINAL)
   private ActivityStatus status;
 
   private LocalDateTime startedAt;
