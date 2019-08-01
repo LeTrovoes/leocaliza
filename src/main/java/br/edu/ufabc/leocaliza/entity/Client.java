@@ -1,11 +1,17 @@
 package br.edu.ufabc.leocaliza.entity;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
+@Getter @Setter @NoArgsConstructor
 public class Client extends User {
 
   @Column(unique = true)
@@ -15,5 +21,6 @@ public class Client extends User {
   @Column(scale = 2)
   private BigDecimal owe;
 
-// - historicoReserva :
+  private List<Activity> log;
+
 }

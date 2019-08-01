@@ -9,14 +9,21 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.AccessLevel;
+
 import org.hibernate.annotations.NaturalId;
 
 @Entity
 @Table(name="leocalizaUser")
 @Inheritance(strategy = InheritanceType.JOINED)
+@Getter @Setter @NoArgsConstructor
 public abstract class User {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Setter(AccessLevel.NONE)
   private long id;
 
   @NaturalId
@@ -37,10 +44,4 @@ public abstract class User {
 
   private String endereco;
 
-  /**
-   * @param cpf the cpf to set
-   */
-  public void setCpf(String cpf) {
-    this.cpf = cpf;
-  }
 }

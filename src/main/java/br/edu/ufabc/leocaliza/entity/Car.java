@@ -4,7 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
+@Getter @Setter @NoArgsConstructor
 public class Car extends Vehicle {
   private int seats;
 
@@ -15,6 +20,6 @@ public class Car extends Vehicle {
   @Enumerated(EnumType.ORDINAL)
   private Steering steering;
 
-// - portaMala :
+  private int trunck;
 
 }

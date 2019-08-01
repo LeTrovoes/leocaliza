@@ -3,6 +3,11 @@ package br.edu.ufabc.leocaliza.entity;
 import org.joda.time.Duration;
 import org.joda.time.LocalDateTime;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.AccessLevel;
+
 import javax.persistence.Enumerated;
 import javax.persistence.EnumType;
 import javax.persistence.Entity;
@@ -11,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
+@Getter @Setter @NoArgsConstructor
 public class Activity {
 
   public enum ActivityType {
@@ -43,6 +49,7 @@ public class Activity {
 
   @Id
   @GeneratedValue
+  @Setter(AccessLevel.NONE)
   private long id;
 
   @Enumerated(EnumType.ORDINAL)
