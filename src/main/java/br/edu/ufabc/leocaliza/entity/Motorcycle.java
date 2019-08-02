@@ -9,5 +9,4 @@ import lombok.Setter;
 @Entity
 @Getter @Setter @NoArgsConstructor
 public class Motorcycle extends Vehicle {
-  // - bau :
 }

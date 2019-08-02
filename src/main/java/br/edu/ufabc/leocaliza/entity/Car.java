@@ -20,6 +20,4 @@ public class Car extends Vehicle {
   @Enumerated(EnumType.ORDINAL)
   private Steering steering;
 
-  private int trunck;
-
 }

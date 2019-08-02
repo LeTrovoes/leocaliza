@@ -48,4 +48,6 @@ public abstract class Vehicle {
 
   private String annotations;
 
+  private int trunck;
+
 }
