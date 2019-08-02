@@ -1,5 +1,7 @@
 package br.edu.ufabc.leocaliza.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,16 +9,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.AccessLevel;
 
 import org.hibernate.annotations.NaturalId;
 
 @Entity
 @Table(name="leocalizaUser")
 @Inheritance(strategy = InheritanceType.JOINED)
+@Getter @Setter @NoArgsConstructor
 public abstract class User {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Setter(AccessLevel.NONE)
   private long id;
 
   @NaturalId
@@ -35,12 +45,9 @@ public abstract class User {
   @Column(name = "user_password")
   private String password;
 
-  private String endereco;
+  private String address;
 
-  /**
-   * @param cpf the cpf to set
-   */
-  public void setCpf(String cpf) {
-    this.cpf = cpf;
-  }
+  @OneToMany
+  private List<Activity> log;
+
 }
