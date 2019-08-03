@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -24,6 +26,20 @@ import lombok.AccessLevel;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Getter @Setter @NoArgsConstructor
 public abstract class Vehicle {
+
+  public enum Status {
+    AVAILABLE(0), MAINTENANCE(1), CLEANING(2), RENTED(3);
+
+    private int type;
+
+    Status(int type) {
+      this.type = type;
+    }
+
+    public int getType() {
+      return type;
+    }
+  }
 
   @Id
   @GeneratedValue
@@ -49,5 +65,8 @@ public abstract class Vehicle {
   private String annotations;
 
   private int trunck;
+
+  @Enumerated(EnumType.ORDINAL)
+  private Status status;
 
 }

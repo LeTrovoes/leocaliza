@@ -3,6 +3,8 @@ package br.edu.ufabc.leocaliza.service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import br.edu.ufabc.leocaliza.entity.User;
 import br.edu.ufabc.leocaliza.repository.UserRepository;
 import br.edu.ufabc.leocaliza.exception.InvalidLoginException;

@@ -8,5 +8,5 @@ import br.edu.ufabc.leocaliza.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-  User findByCpf(String cpf);
+  public User findByCpf(String cpf);
 }
