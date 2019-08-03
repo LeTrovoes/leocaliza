@@ -32,7 +32,7 @@ public class ClientService {
   }
 
   public boolean hasDebit(String cpf){
-    Client client  = clientRepository.findByCpf(cpf)
+    Client client = clientRepository.findByCpf(cpf)
       .orElseThrow(() -> new UserNotFoundException());
       return (client.getOwe().signum() > 0);
   }
