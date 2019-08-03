@@ -1,9 +1,12 @@
 package br.edu.ufabc.leocaliza.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import br.edu.ufabc.leocaliza.entity.User;
 import br.edu.ufabc.leocaliza.repository.UserRepository;
 
+@Service
 public class UserService{
   @Autowired
   UserRepository userRepository;
