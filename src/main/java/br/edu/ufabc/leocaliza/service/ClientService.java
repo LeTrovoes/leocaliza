@@ -28,13 +28,15 @@ public class ClientService {
   }
 
   public Client update(Client newClient) {
-    Client client  = clientRepository.findById(newClient.getId())
-      .orElseThrow(new UserNotFoundException(newClient));
-    client.setEmail(newClient.getEmail());
-    client.setAddress(newClient.getAddress());
-    client.setBankcard(newClient.getBankcard());
-    client.setPassword(newClient.getPassword());
-    save(client);
+    clientRepository.findById(newClient.getId())
+      .orElseThrow(new UserNotFoundException());
+    save(newClient);
+  }
+
+  public boolean hasDebit(String cpf){
+    Client client  = clientRepository.findByCpf(cpf)
+    .orElseThrow(new UserNotFoundException());
+    return (client.getOwe().signum() > 0);
   }
 
   public List<Client> findAll() {

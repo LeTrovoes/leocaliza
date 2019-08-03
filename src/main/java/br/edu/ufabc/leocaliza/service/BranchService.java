@@ -14,7 +14,17 @@ public class BranchService {
   BranchRepository branchRepository;
 
   public Branch save(Branch branch) {
+    // if admim
+    validateName(branch.getName());
+    if(branch.getManager() == null)
+      throw new NoManagerException();
     return branchRepository.save(branch);
+  }
+
+  public Branch update(Branch branch) {
+    branchRepository.findById(branch.getId())
+      .orElseThrow(new BranchNotFoundException());
+    save(branch);
   }
 
 }

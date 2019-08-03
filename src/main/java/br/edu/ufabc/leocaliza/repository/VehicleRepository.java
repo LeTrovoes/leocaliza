@@ -9,5 +9,5 @@ import br.edu.ufabc.leocaliza.entity.Vehicle.Status;
 
 @Repository
 public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
-  List<Vehicle> findByStatus(Status status);
+  public List<Vehicle> findByStatus(Status status);
 }

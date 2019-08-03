@@ -8,5 +8,5 @@ import br.edu.ufabc.leocaliza.entity.Client;
 
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Long> {
-  List<Client> findByCpf(String cpf);
+  public List<Client> findByCpf(String cpf);
 }
