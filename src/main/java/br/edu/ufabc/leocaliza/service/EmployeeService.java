@@ -8,7 +8,7 @@ import br.edu.ufabc.leocaliza.entity.Employee;
 import br.edu.ufabc.leocaliza.repository.EmployeeRepository;
 
 @Service
-public class EmployeeService{
+public class EmployeeService {
   @Autowired
   EmployeeRepository employeeRepository;
 

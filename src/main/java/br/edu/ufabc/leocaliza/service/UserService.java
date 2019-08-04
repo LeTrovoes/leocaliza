@@ -10,7 +10,7 @@ import br.edu.ufabc.leocaliza.repository.UserRepository;
 import br.edu.ufabc.leocaliza.exception.InvalidLoginException;
 
 @Service
-public class UserService{
+public class UserService {
   @Autowired
   UserRepository userRepository;
   BCryptPasswordEncoder passwordEncoder;
