@@ -10,10 +10,6 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
-@NamedQuery(name = "Employee.findAllManagers",
-  query = "select e from Employee e where e.editEmployeesPermission = true")
-@NamedQuery(name = "Employee.findAllGlobalManagers",
-  query = "select e from Employee e where e.editBranchesPermission = true")
 public class Employee extends User {
 
   private boolean editEmployeesPermission = false;
