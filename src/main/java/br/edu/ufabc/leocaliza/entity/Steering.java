@@ -1,8 +1,8 @@
 package br.edu.ufabc.leocaliza.entity;
 
 
-public enum Steering{
-  MECANICA(0), HIDRAULICA(1), ELETRICA(2);
+public enum Steering {
+  MECHANICAL(0), HYDRAULIC(1), ELECTRIC(2);
 
   private int value;
 
