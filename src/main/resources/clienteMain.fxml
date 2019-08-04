@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ufabc.leocaliza.controller.LoginController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
    <children>
       <AnchorPane prefHeight="301.0" prefWidth="383.0">
          <children>
             <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="Área do cliente" />
             <ComboBox layoutX="14.0" layoutY="151.0" prefWidth="180.0" promptText="Selecione o veículo" />
-            <Button layoutX="14.0" layoutY="97.0" mnemonicParsing="false" onAction="#teste" text="Fazer uma reserva" />
+            <Button layoutX="14.0" layoutY="97.0" mnemonicParsing="false" text="Fazer uma reserva" />
          </children>
       </AnchorPane>
    </children>
