@@ -8,16 +8,18 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.AccessLevel;
 
+import java.io.Serializable;
+
 import javax.persistence.Enumerated;
 import javax.persistence.EnumType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
-public class Activity {
+public class Activity implements Serializable {
 
   public enum ActivityType {
     LEASE(0), MAINTENANCE(1), CLEANING(2), TRANSFER(3);
@@ -66,16 +68,16 @@ public class Activity {
 
   private String description;
 
-  @OneToOne
+  @ManyToOne
   private Vehicle vehicle;
 
-  @OneToOne
+  @ManyToOne
   private User user;
 
-  @OneToOne
+  @ManyToOne
   private Branch startingBranch;
 
-  @OneToOne
+  @ManyToOne
   private Branch endingBranch;
 
 }

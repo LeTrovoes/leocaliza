@@ -6,7 +6,7 @@ import br.edu.ufabc.leocaliza.exception.InvalidEmailException;
 import br.edu.ufabc.leocaliza.exception.InvalidNameException;
 import br.edu.ufabc.leocaliza.exception.InvalidPasswordException;
 
-public abstract class Validation{
+public abstract class Validation {
 
   public static void validateCpf(String cpf) {
     if (cpf == null || !cpf.matches("\\d{11}$"))

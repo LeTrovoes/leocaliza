@@ -1,5 +1,7 @@
 package br.edu.ufabc.leocaliza.entity;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -23,7 +25,7 @@ import org.hibernate.annotations.NaturalId;
 @Table(name="leocalizaUser")
 @Inheritance(strategy = InheritanceType.JOINED)
 @Getter @Setter @NoArgsConstructor
-public abstract class User {
+public abstract class User implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Setter(AccessLevel.NONE)
@@ -36,9 +38,6 @@ public abstract class User {
   @Column(name = "user_name")
   private String name;
 
-  /**
-   * E-mail válido do usuário.
-   */
   @Column(unique = true)
   private String email;
 
@@ -48,6 +47,6 @@ public abstract class User {
   private String address;
 
   @OneToMany
-  private List<Activity> log;
+  private List<Activity> log = new ArrayList<Activity>();
 
 }
