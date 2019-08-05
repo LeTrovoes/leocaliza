@@ -30,7 +30,7 @@ public class LeocalizaApplication extends Application {
   @Override
   public void init() throws Exception {
     springContext = SpringApplication.run(LeocalizaApplication.class);
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("/funcionarioVeiculo.fxml"));
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/login.fxml"));
     loader.setControllerFactory(springContext::getBean);
     rootNode = loader.load();
     screenController = springContext.getBean(ScreenController.class);
