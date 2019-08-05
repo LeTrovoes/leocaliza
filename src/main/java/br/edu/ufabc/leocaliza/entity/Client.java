@@ -16,7 +16,6 @@ public class Client extends User {
   @Column(unique = true)
   private String bankcard;
 
-
   @Column(scale = 2)
   private BigDecimal owe;
 

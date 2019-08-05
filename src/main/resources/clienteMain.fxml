@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.media.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ufabc.leocaliza.controller.ClienteMainController">
    <children>
-      <AnchorPane prefHeight="301.0" prefWidth="383.0">
+      <AnchorPane prefHeight="228.0" prefWidth="383.0">
          <children>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="Área do cliente" />
-            <ComboBox layoutX="14.0" layoutY="151.0" prefWidth="180.0" promptText="Selecione o veículo" />
-            <Button layoutX="14.0" layoutY="97.0" mnemonicParsing="false" text="Fazer uma reserva" />
+            <Button fx:id="areaCliente" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="140.0" onAction="#areaCliente" text="Área do cliente" />
+            <Button fx:id="reserva" layoutX="14.0" layoutY="97.0" mnemonicParsing="false" onAction="#reserva" text="Fazer uma reserva" />
+            <Button fx:id="Sair" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onAction="#voltaMainCliente" text="Sair" />
+            <ListView fx:id="list" layoutX="169.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </AnchorPane>
    </children>

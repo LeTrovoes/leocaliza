@@ -29,4 +29,8 @@ public class BranchService {
     return save(branch);
   }
 
+  public List<Branch> findAll() {
+    return branchRepository.findAll();
+  }
+
 }

@@ -26,7 +26,7 @@ public class Branch {
   private String name;
 
   @Column(unique = true)
-  private String endereco;
+  private String address;
 
   @OneToOne
   Employee manager;

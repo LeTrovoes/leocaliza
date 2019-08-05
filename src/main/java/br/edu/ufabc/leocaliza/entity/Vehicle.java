@@ -46,6 +46,8 @@ public abstract class Vehicle {
   @Setter(AccessLevel.NONE)
   private long id;
 
+  private String model;
+
   private int wheels;
 
   private float fuel;
@@ -64,7 +66,7 @@ public abstract class Vehicle {
 
   private String annotations;
 
-  private int trunck;
+  private int trunk;
 
   @Enumerated(EnumType.ORDINAL)
   private Status status;

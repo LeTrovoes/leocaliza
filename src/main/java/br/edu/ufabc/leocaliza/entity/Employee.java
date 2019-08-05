@@ -19,7 +19,4 @@ public class Employee extends User {
   @OneToOne
   private Branch branch;
 
-  public Employee(String cpf) {
-    setCpf(cpf);
-  }
 }
